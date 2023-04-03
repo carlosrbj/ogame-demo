@@ -1,10 +1,12 @@
 package com.hsob.ogamedemo.model.resources;
 
+import com.hsob.ogamedemo.dto.resource.request.LevelDefinitionsRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -13,15 +15,22 @@ import java.util.List;
 @NoArgsConstructor
 public class LevelDefinitions {
     private String level;
-    private Status status;
-    private Integer quantityPerSecond;
-    private Double productionInterval;
-    private List<NextLevelDependency> nextLevelDependencies;
+    private Double storageCapacity;
+    private Double productionQuantity;
+    private Double productionTime;
+    private UpgradeDefinitions upgradeDefinitions;
 
-    public LevelDefinitions(String level, Integer quantityPerSecond, Double productionInterval, List<NextLevelDependency> nextLevelDependencies) {
-        this.level = level;
-        this.quantityPerSecond = quantityPerSecond;
-        this.productionInterval = productionInterval;
-        this.nextLevelDependencies = nextLevelDependencies;
+    public LevelDefinitions(LevelDefinitionsRequest request) {
+        this.level = request.level();
+        this.storageCapacity = request.storageCapacity();
+        this.productionQuantity = request.productionQuantity();
+        this.productionTime = request.productionTime();
+        this.upgradeDefinitions = new UpgradeDefinitions(request.upgradeDefinitions());
+    }
+
+    public List<LevelDefinitions> createLevelList(List<LevelDefinitionsRequest> levelDefinitions) {
+        List<LevelDefinitions> list = new ArrayList<>();
+        levelDefinitions.forEach(i -> list.add(new LevelDefinitions(i)));
+        return list;
     }
 }
