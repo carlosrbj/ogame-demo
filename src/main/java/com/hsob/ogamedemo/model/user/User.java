@@ -16,4 +16,6 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 public class User {
     private @MongoId ObjectId id;
     private String name;
+    private String gender;
+    private String username;
 }
