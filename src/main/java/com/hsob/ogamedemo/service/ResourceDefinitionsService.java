@@ -1,10 +1,8 @@
 package com.hsob.ogamedemo.service;
 
-import com.hsob.ogamedemo.dto.resource.request.ResourceDefinitionsRequest;
-import com.hsob.ogamedemo.model.resources.Resources;
+import com.hsob.ogamedemo.dto.resourceDefinitions.request.ResourceDefinitionsRequest;
 import com.hsob.ogamedemo.model.resources_definitions.ResourceDefinitions;
 import com.hsob.ogamedemo.repository.ResourceDefinitionsRepository;
-import com.hsob.ogamedemo.repository.ResourcesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

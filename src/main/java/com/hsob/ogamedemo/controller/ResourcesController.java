@@ -1,8 +1,8 @@
 package com.hsob.ogamedemo.controller;
 
-
+import com.hsob.ogamedemo.dto.resource.request.ResourceRequest;
 import com.hsob.ogamedemo.dto.resourceDefinitions.request.ResourceDefinitionsRequest;
-import com.hsob.ogamedemo.service.ResourceDefinitionsService;
+import com.hsob.ogamedemo.service.ResourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("/resources-definitions")
-public class ResourceDefinitionsController {
+@RequestMapping("/resources")
+public class ResourcesController {
 
     @Autowired
-    private ResourceDefinitionsService resourceDefinitionsService;
-
+    private ResourcesService resourcesService;
     @PostMapping("/create")
-    public ResponseEntity<ResourceDefinitionsRequest> createNewResourceDefinitions(@RequestBody ResourceDefinitionsRequest resourceDefinitionsRequest, UriComponentsBuilder uriBuilder){
-        var resource = resourceDefinitionsService.createNewResourceDefinitions(resourceDefinitionsRequest);
+    public ResponseEntity<ResourceRequest> createNewResource(@RequestBody ResourceRequest resourceRequest, UriComponentsBuilder uriBuilder){
+        var resource = resourcesService.createNewResource(resourceRequest);
         var uri = uriBuilder.path("/resources/create/{_id}").buildAndExpand(resource).toUri();
         return ResponseEntity.created(uri).body(resource);
     }

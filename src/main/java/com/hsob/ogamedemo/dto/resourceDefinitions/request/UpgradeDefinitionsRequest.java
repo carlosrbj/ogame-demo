@@ -1,4 +1,4 @@
-package com.hsob.ogamedemo.dto.resource.request;
+package com.hsob.ogamedemo.dto.resourceDefinitions.request;
 
 import java.util.List;
 

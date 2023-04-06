@@ -1,4 +1,4 @@
-package com.hsob.ogamedemo.dto.resource.request;
+package com.hsob.ogamedemo.dto.resourceDefinitions.request;
 
 public record UpgradeDependencyRequest(
         String type,

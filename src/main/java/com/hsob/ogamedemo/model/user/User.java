@@ -12,10 +12,9 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user")
+@Document(collection = "users")
 public class User {
     private @MongoId ObjectId id;
     private String name;
-    private String gender;
     private String username;
 }
