@@ -1,6 +1,10 @@
 package com.hsob.ogamedemo.repository;
 
+import com.hsob.ogamedemo.model.resources_definitions.ResourceDefinitions;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface ResourceDefinitionsRepository extends MongoRepository<com.hsob.ogamedemo.model.resources_definitions.ResourceDefinitions, String> {
+import java.util.List;
+
+public interface ResourceDefinitionsRepository extends MongoRepository<ResourceDefinitions, String> {
+    List<ResourceDefinitions> findAllByType(String type);
 }

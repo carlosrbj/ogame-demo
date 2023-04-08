@@ -1,7 +1,6 @@
 package com.hsob.ogamedemo.controller;
 
 import com.hsob.ogamedemo.dto.resource.request.ResourceRequest;
-import com.hsob.ogamedemo.dto.resourceDefinitions.request.ResourceDefinitionsRequest;
 import com.hsob.ogamedemo.service.ResourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

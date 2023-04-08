@@ -1,5 +1,6 @@
 package com.hsob.ogamedemo.model.user;
 
+import com.hsob.ogamedemo.dto.user.request.UserRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,9 @@ public class User {
     private @MongoId ObjectId id;
     private String name;
     private String username;
+
+    public User(UserRequest userRequest) {
+        this.name = userRequest.name();
+        this.username = userRequest.username();
+    }
 }

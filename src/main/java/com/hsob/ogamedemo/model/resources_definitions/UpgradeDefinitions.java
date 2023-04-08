@@ -1,4 +1,4 @@
-package com.hsob.ogamedemo.model.resources;
+package com.hsob.ogamedemo.model.resources_definitions;
 
 import com.hsob.ogamedemo.dto.resourceDefinitions.request.UpgradeDefinitionsRequest;
 import lombok.AllArgsConstructor;
