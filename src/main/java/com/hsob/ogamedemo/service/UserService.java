@@ -18,7 +18,7 @@ public class UserService {
             userRepository.save(user);
             return userRequest;
         } catch (Exception e){
-            throw new RuntimeException(e.getMessage());
+            throw new IllegalArgumentException(e.getMessage());
         }
     }
 

@@ -1,6 +1,6 @@
 package com.hsob.ogamedemo.model.resources_definitions;
 
-import com.hsob.ogamedemo.dto.resourceDefinitions.request.LevelDefinitionsRequest;
+import com.hsob.ogamedemo.dto.resource_definitions.request.LevelDefinitionsRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

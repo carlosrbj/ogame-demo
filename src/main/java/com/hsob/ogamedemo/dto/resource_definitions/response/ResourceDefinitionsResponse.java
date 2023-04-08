@@ -1,11 +1,8 @@
-package com.hsob.ogamedemo.dto.resourceDefinitions.response;
+package com.hsob.ogamedemo.dto.resource_definitions.response;
 
-import com.hsob.ogamedemo.dto.resourceDefinitions.request.IconRequest;
-import com.hsob.ogamedemo.dto.resourceDefinitions.request.LevelDefinitionsRequest;
 import com.hsob.ogamedemo.model.resources_definitions.Icon;
 import com.hsob.ogamedemo.model.resources_definitions.LevelDefinitions;
 import com.hsob.ogamedemo.model.resources_definitions.ResourceDefinitions;
-import lombok.NonNull;
 
 import java.util.List;
 

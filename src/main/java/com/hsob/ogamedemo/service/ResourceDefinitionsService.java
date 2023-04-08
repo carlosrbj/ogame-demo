@@ -1,7 +1,7 @@
 package com.hsob.ogamedemo.service;
 
-import com.hsob.ogamedemo.dto.resourceDefinitions.request.ResourceDefinitionsRequest;
-import com.hsob.ogamedemo.dto.resourceDefinitions.response.ResourceDefinitionsResponse;
+import com.hsob.ogamedemo.dto.resource_definitions.request.ResourceDefinitionsRequest;
+import com.hsob.ogamedemo.dto.resource_definitions.response.ResourceDefinitionsResponse;
 import com.hsob.ogamedemo.model.resources_definitions.ResourceDefinitions;
 import com.hsob.ogamedemo.repository.ResourceDefinitionsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class ResourceDefinitionsService {
             resourceDefinitionsRepository.save(resource);
             return resourceDefinitionsRequest;
         } catch (Exception e){
-            throw new RuntimeException(e.getMessage());
+            throw new IllegalArgumentException(e.getMessage());
         }
     }
 
@@ -34,7 +34,7 @@ public class ResourceDefinitionsService {
             list.forEach(l -> response.add(new ResourceDefinitionsResponse(l)));
             return response;
         } catch (Exception e){
-            throw new RuntimeException(e.getMessage());
+            throw new IllegalArgumentException(e.getMessage());
         }
     }
 
@@ -45,7 +45,7 @@ public class ResourceDefinitionsService {
             return new ResourceDefinitionsResponse(resource.get());
         }
         catch (Exception e){
-            throw new RuntimeException(e.getMessage());
+            throw new IllegalArgumentException(e.getMessage());
         }
     }
 }

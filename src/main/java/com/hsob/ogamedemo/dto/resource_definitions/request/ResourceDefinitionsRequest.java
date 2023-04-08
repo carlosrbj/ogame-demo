@@ -1,4 +1,4 @@
-package com.hsob.ogamedemo.dto.resourceDefinitions.request;
+package com.hsob.ogamedemo.dto.resource_definitions.request;
 
 import lombok.NonNull;
 

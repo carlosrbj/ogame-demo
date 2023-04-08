@@ -24,8 +24,8 @@ public class Resources {
     private Double storageCapacity;
     private Double currentProduction;
     private Double hidingCapacity;
-    private ObjectId userId;
-    private ObjectId resourceDefinitionsId;
+    private String userId;
+    private String resourceDefinitionsId;
 
     public Resources(ResourceRequest request) {
         this.type = request.type();
@@ -36,7 +36,7 @@ public class Resources {
         this.storageCapacity = request.storageCapacity();
         this.currentProduction = request.currentProduction();
         this.hidingCapacity = request.hidingCapacity();
-        this.userId = new ObjectId(request.userId());
-        this.resourceDefinitionsId = new ObjectId(request.resourceDefinitionsId());
+        this.userId = request.userId();
+        this.resourceDefinitionsId = request.resourceDefinitionsId();
     }
 }
