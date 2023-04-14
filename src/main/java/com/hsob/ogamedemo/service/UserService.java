@@ -12,6 +12,7 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
     public UserRequest createNewUser(UserRequest userRequest) {
         try {
             var user = new User(userRequest);
